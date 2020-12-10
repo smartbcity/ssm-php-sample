@@ -1,0 +1,7 @@
+{
+	"name": "account",
+	"transitions": [
+	      { "from": 0, "to": 0, "role": "Creditor", "action": "Credit" },
+          { "from": 0, "to": 0, "role": "Debitor", "action": "Debit" }
+	]
+}
