@@ -294,9 +294,9 @@ $privateKey = openssl_pkey_get_private("file://keys/ssm-admin");
 // 
 // credit(
 //    <account-id>,   // ssm session 
-//    <token>, 
+//    <token-name>, 
 //    <amount>, 
-//    <credito-name>, 
+//    <creditor-name>, 
 //    <path-to-creditor-priv-key>
 // )
 
@@ -311,10 +311,10 @@ credit("account-5678", "vert", 1, "bank", "file://keys/bank");
 // 
 // debit(
 //    <account-id>,   // ssm session 
-//    <token>, 
+//    <token-name>, 
 //    <amount>, 
-//    <credito-name>, 
-//    <path-to-creditor-priv-key>
+//    <debitor-name>, 
+//    <path-to-debitor-priv-key>
 // )
 
 debit("account-5678", "rouge", 4, "shop", "file://keys/shop");
