@@ -6,13 +6,13 @@
 
 ---
 
-The ssm-sample PHP script provides examples to interact with the SmartB blockchain using the REST API deployed on a node. 
+The ssm-sample PHP script provides examples to interact with the SmartB blockchain. 
 
-The sample focuses on interactions with state machine called "account" which managed the balance of tokens. It provides other more generic example that could be used to implement many other use cases.
+While offering a lot of examples, the use case focuses on basic interactions with an "account" state machine registering the balance of tokens.
 
-Getting started: 
+The main interactions to focus on at first are: 
 
-- creation of a new account
+- the creation of a new account
 - crediting an account
 - debiting an account
 - display of the current state of an account
@@ -27,11 +27,19 @@ More advanced examples are also available:
 
 
 
+
+
+# Before Starting
+
+The PHP script uses a number of RSA key pairs that have been registered on the test server. In order for the script to work with its current configuration, the private keys of the users `bank`and `shop`have to be present in the directory. The private key of the user`ssm-admin`is also required to create new accounts (new SSM sessions to be precise). If you don't have them, please contact SmartB to get the `keys` folder.
+
+
+
 # Account Creation (Start the automaton)
 
 ---
 
-In this example each new account will be managed on a new session of the `account` ssm. For each new session, a new initial state is required. The initial state specifies, the name of the session and the roles.
+In this example each new account will be managed on a new session of the `account` SSM. For each new session, a new initial state is required. The initial state specifies, the name of the session and the roles.
 
 ```php
 // Load the private key required to complete the operation
